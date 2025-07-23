@@ -2,7 +2,7 @@
 title: Moving From Bare-Metal To Proxmox
 description: Read about my experience with moving from Docker to Proxmox
 author: syntaxslinger
-date: 00:00:00 +1000
+date: 2025-07-17 00:00:00 +1000
 categories: Homelab
 image:
   path: /assets/img/proxmox.webp
