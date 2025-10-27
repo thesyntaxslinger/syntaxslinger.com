@@ -38,5 +38,6 @@ nav:
     - 'Storage Setup': hypervisor/storage-setup.md
     - 'Backups': hypervisor/backups.md
     - 'Networking': hypervisor/networking.md
-    - 'Bootstrapping': hypervisor/bootstrapping.md
-    - 'Updates and Patch Management': hypervisor/updates-and-patch-management.md
+  - 'Administration':
+    - 'Bootstrapping': administration/bootstrapping.md
+    - 'Updates and Patch Management': administration/updates-and-patch-management.md
