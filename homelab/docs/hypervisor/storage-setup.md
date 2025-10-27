@@ -1,6 +1,5 @@
 ---
 title: Storage Setup
-nav_order: 10
 ---
 
 # Storage Setup
