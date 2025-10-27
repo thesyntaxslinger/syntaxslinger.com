@@ -18,8 +18,8 @@ I have 3 HDD's using BTRFS without redudancy either. Sounds scary I know, but I 
 
 Here is a nice little graph.
 
-![storage graph](/assets/drawio.svg#only-dark)
-![storage graph](/assets/drawio-light.svg#only-light)
+![storage graph](/assets/img/storage-setup-dark.svg#only-dark)
+![storage graph](/assets/img/storage-setup-light.svg#only-light)
 
 
 As you can see. This isn't the biggest setup in the world. But it is enough to run some sort of HA setup and works overall pretty well for my own usecase.

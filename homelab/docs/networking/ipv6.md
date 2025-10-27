@@ -2,7 +2,9 @@
 title: IPv6
 ---
 
-# IPv6
+# IPv6 - The Better Protocol
+
+## Overview
 
 This is my favourite part about my homelab. IPv6 only network with most of my LXC containers being IPv6-only.
 

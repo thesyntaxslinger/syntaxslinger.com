@@ -45,4 +45,7 @@ nav:
     - 'Updates and Patch Management': administration/updates-and-patch-management.md
   - 'Networking':
     - 'Overview': networking/overview.md
+    - 'DNS': networking/dns.md
+    - 'DHCP': networking/dhcp.md
+    - "VLANs": networking/vlans.md
     - 'IPv6': networking/ipv6.md
