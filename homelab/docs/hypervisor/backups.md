@@ -6,7 +6,7 @@ title: Backups
 
 Backups are probably the most important thing you need to do when running any kind of homelab.
 
-For my homelab backups, I use two kinds of backups:
+For my homelab backups, I use two kinds of backup methods:
 
 - **Proxmox Backup Server (PBS)**
 - **Borg Backup**
