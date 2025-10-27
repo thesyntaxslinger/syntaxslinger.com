@@ -1,6 +1,7 @@
 site_name: Homelab Documentation
 site_description: 'This is my homelab documentation that includes pretty much everything to do with my current lab.'
 site_author: 'thesyntaxslinger'
+site_url: 'https://syntaxslinger.com/'
 
 repo_name: 'syntaxslinger.com'
 repo_url: 'https://github.com/thesyntaxslinger/syntaxslinger.com'
