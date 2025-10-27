@@ -6,11 +6,15 @@ title: Storage Setup
 
 For my storage setup, I have a pretty cursed setup. If you read the [introduction](/homelab/) you know that my first "homelab" was actually just a repurposed desktop running Debian 11.
 
-Since I migrated this same machine later into node for my Proxmox cluster, I kept the same type of filesystem since I didn't have a spare 18TB hard drive just laying around that I can use for the migration.
+Since I migrated this same machine later into node for my Proxmox cluster, I kept the same type of filesystem since I didn't have a spare 22TB hard drive just laying around that I can use for the migration.
 
+## ZFS
 
-##
-I have gone with ZFS for my boot drive on all my nodes without redundancy, and then for my big storage box, I have 3 HDD's using BTRFS without redudancy either. Sounds scary I know, but I have a good back up method for it all, so I am not too worried about loosing data.
+I have gone with ZFS for my boot drive on all my nodes without redundancy.
+This was due to me not being familiar with ZFS at all, and I wanted to learn the basics of it since I 100% know I will be switching to it later for when I can build a bigger/better storage array.
+
+## BTRFS
+I have 3 HDD's using BTRFS without redudancy either. Sounds scary I know, but I have a good back up method for it all, so I am not too worried about loosing data.
 
 Here is a nice little graph.
 
