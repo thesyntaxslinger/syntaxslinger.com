@@ -46,6 +46,6 @@ nav:
   - 'Networking':
     - 'Overview': networking/overview.md
     - 'DNS': networking/dns.md
-    - 'DHCP': networking/dhcp.md
+    - 'VPNs': networking/vpns.md
     - "VLANs": networking/vlans.md
     - 'IPv6': networking/ipv6.md
