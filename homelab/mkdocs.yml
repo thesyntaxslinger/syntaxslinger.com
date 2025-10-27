@@ -37,3 +37,4 @@ nav:
     - 'Overview': hypervisor/overview.md
     - 'Storage Setup': hypervisor/storage-setup.md
     - 'Backups': hypervisor/backups.md
+    - 'Networking': hypervisor/networking.md
