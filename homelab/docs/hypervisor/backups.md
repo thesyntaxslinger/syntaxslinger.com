@@ -36,6 +36,17 @@ Here’s I implement this in my homelab environment:
 
 I would love to try out immutable backups as well, but for my current setup at home and my threat model. This works perfectly.
 
+## Borg Backup
+
+I use Borg mainly for my files that aren't in VM's or LXC containers. For example - for my NAS LXC container where I have NFS and SMB setup, this uses my BTRFS storage as the backend storage provider, and because of the size of this - it doesn't get backed up at all.
+
+This is where Borg comes in - I select the files I want manually to backup via a `bash` script, which will then backup to the same places my PBS instances go too:
+
+1. My desktop PC for both the HDD and SSD
+2. My VPS
+
+These are encrypted backups with a different encryption scheme/key to the PBS datastores.
+
 ## Proxmox Backup Server
 
 For anything that is Proxmox related like VM's or LXC containers, I use Proxmox Backup Server to do my backups with.
@@ -84,18 +95,6 @@ services:
 As you can see from the yaml, the SSD and HDD are both mounted and have seperate datastores inside of them.
 
 Although this isn't recommended, the PBS software is actually just a .deb file that uses a few dependencies, so you can even install it bare metal if you want to. Of course you will miss out on the fancy features of PBS like the tape backups and smart monitoring, but this works super well for my setup.
-
-## Borg Backup
-
-I use Borg mainly for my files that aren't in VM's or LXC containers. For example - for my NAS LXC container where I have NFS and SMB setup, this uses my BTRFS storage as the backend storage provider, and because of the size of this - it doesn't get backed up at all.
-
-This is where Borg comes in - I select the files I want manually to backup via a `bash` script, which will then backup to the same places my PBS instances go too:
-
-1. My desktop PC for both the HDD and SSD
-2. My VPS
-
-These are encrypted backups with a different encryption scheme/key to the PBS datastores.
-
 
 ## Linking Both Methods Together
 

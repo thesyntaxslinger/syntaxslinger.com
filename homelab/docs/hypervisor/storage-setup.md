@@ -8,6 +8,8 @@ For my storage setup, I have a pretty cursed setup. If you read the [introductio
 
 Since I migrated this same machine later into node for my Proxmox cluster, I kept the same type of filesystem since I didn't have a spare 18TB hard drive just laying around that I can use for the migration.
 
+
+##
 I have gone with ZFS for my boot drive on all my nodes without redundancy, and then for my big storage box, I have 3 HDD's using BTRFS without redudancy either. Sounds scary I know, but I have a good back up method for it all, so I am not too worried about loosing data.
 
 Here is a nice little graph.
