@@ -1,14 +1,15 @@
 ---
-title: Hypervisor
+title: Overview
 nav_order: 1
 ---
 
 
-# Hypervisor: Proxmox Virtual Environment
+# Overview
 
 For my hypervisor of choice, I have gone with Proxmox Virtual Environment. Mainly because it is the hypervisor of choice for many other homelabbers out there, and it is free and open source.
 
-![Proxmox Logo](/assets/img/proxmox.webp)
+![Proxmox Logo](/assets/img/proxmox.webp#only-light)
+![Proxmox Logo](/assets/img/proxmox-light.webp#only-dark)
 
 ## How To Install
 
