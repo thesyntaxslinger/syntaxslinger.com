@@ -150,7 +150,48 @@ This helps when patching, since you know what to expect and can become a better 
 ![RSS Update Feed](/assets/img/updates-in-software-releases-light.webp#only-light)
 ![RSS Update Feed](/assets/img/updates-in-software-releases-dark.webp#only-dark)
 
-### Why Manually Applying Patches Matters
+
+### Updating ZSH Globally With Ansible
+
+I love ZSH. So here is how I update all my VM's, LXC containers and VPS's with ansible:
+
+```yaml
+---
+- name: Sync .zshrc files to hosts
+  hosts: debian_hosts,debian_containers,remote_hosts
+  gather_facts: true
+  vars:
+    local_zshrc: "{{ lookup('env', 'HOME') }}/.config/zsh/.zshrc"
+    remote_zshrc: "{{ ansible_env.HOME }}/.config/zsh/.zshrc"
+
+  tasks:
+    - name: Ensure remote zsh config directory exists
+      file:
+        path: "{{ remote_zshrc | dirname }}"
+        state: directory
+        mode: '0755'
+
+    - name: Copy local .zshrc to remote hosts
+      copy:
+        src: "{{ local_zshrc }}"
+        dest: "{{ remote_zshrc }}"
+        mode: '0644'
+
+    
+# ------------------------------------------------
+- name: Update .zshrc on webserver
+  hosts: pkgcache
+  gather_facts: false
+  tasks:
+    - name: Copy .zshrc
+      copy:
+        src: "{{ lookup('env', 'HOME') }}/.config/zsh/.zshrc"
+        dest: "/var/www/webserver/static/zsh/.zshrc"
+        mode: '0644'
+
+```
+
+## Why Manually Applying Patches Matters
 
 A good example of this recently was an update to my RSS reader [Miniflux](https://github.com/miniflux/v2).
 
@@ -159,3 +200,5 @@ In a [release](https://github.com/miniflux/v2/releases/tag/2.2.14) they listed t
 Without seeing this patch note, I would have been stuck wondering why my app was no longer working.
 
 If I was using something like [watchtower](https://github.com/containrrr/watchtower), then I would have been screwed.
+
+
