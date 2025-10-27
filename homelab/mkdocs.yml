@@ -43,3 +43,6 @@ nav:
   - 'Administration':
     - 'Bootstrapping': administration/bootstrapping.md
     - 'Updates and Patch Management': administration/updates-and-patch-management.md
+  - 'Networking':
+    - 'Overview': networking/overview.md
+    - 'IPv6': networking/ipv6.md
