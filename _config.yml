@@ -215,6 +215,7 @@ exclude:
   - "*.config.js"
   - "package*.json"
   - homelab
+  - drawio
 
 jekyll-archives:
   enabled: [categories, tags]
