@@ -32,9 +32,10 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - 'Introduction': introduction.md
+  - 'Introduction': index.md
   - 'Hypervisor':
     - 'Overview': hypervisor/overview.md
     - 'Storage Setup': hypervisor/storage-setup.md
     - 'Backups': hypervisor/backups.md
     - 'Networking': hypervisor/networking.md
+    - 'Updates and Patch Management': hypervisor/updates-and-patch-management.md
