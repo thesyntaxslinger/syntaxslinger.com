@@ -10,7 +10,7 @@ repo_url: 'https://github.com/thesyntaxslinger/syntaxslinger.com'
 
 theme:
   name: material
-  logo: assets/profile-picture.webp
+  logo: assets/img/profile-picture.webp
   favicon: assets/img/favicons/favicon.ico
   features:
     - navigation.instant
