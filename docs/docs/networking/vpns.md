@@ -101,7 +101,6 @@ DEFAULT_ROUTE=$(ip route | awk '/default/ {print $5}')
 
 
 # make configs
-
 mkdir -p configs
 
 cat <<EOF > configs/server.conf
