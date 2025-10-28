@@ -6,7 +6,7 @@ import re
 import subprocess
 
 JEKYLL_SITEMAP = "_site/sitemap.xml"
-MKDOCS_SITEMAP = "homelab/site/sitemap.xml"
+MKDOCS_SITEMAP = "docs/site/sitemap.xml"
 OUTPUT_SITEMAP = "_site/sitemap.xml"
 
 def read_urls(path):
@@ -26,9 +26,9 @@ def read_urls(path):
 def get_git_lastmod_for_url(url):
     """Try to infer lastmod from the git log using the corresponding file path"""
     rel_path = None
-    if "/homelab/" in url:
-        rel_path = url.split("/homelab/")[-1]
-        rel_path = f"homelab/docs/{rel_path.rstrip('/')}.md"
+    if "/docs/" in url:
+        rel_path = url.split("/docs/")[-1]
+        rel_path = f"docs/docs/{rel_path.rstrip('/')}.md"
     else:
         rel_path = f"{url.split('/')[-2]}.md"
 
