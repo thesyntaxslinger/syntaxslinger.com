@@ -1,8 +1,4 @@
----
-title: Overview
----
-
-# Overview
+# Networking
 
 Networking is the main fun in homelabbing. When I first got into homelabbing, I setup test environments to practice for when I got my first VPS and hardened it.
 

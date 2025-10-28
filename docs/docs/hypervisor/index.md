@@ -1,9 +1,4 @@
----
-title: Overview
----
-
-
-# Overview
+# Proxmox Virtual Environment
 
 For my hypervisor of choice, I have gone with Proxmox Virtual Environment. Mainly because it is the hypervisor of choice for many other homelabbers out there, and it is free and open source.
 
