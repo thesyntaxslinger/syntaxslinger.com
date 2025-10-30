@@ -14,7 +14,11 @@ I have gone with ZFS for my boot drive on all my nodes without redundancy.
 This was due to me not being familiar with ZFS at all, and I wanted to learn the basics of it since I 100% know I will be switching to it later for when I can build a bigger/better storage array.
 
 ## BTRFS
-I have 3 HDD's using BTRFS without redudancy either. Sounds scary I know, but I have a good back up method for it all, so I am not too worried about loosing data.
+I have 3 HDD's using BTRFS without redudancy either. 
+
+This is because I need maximum capacity with my storage setup. The important files on this BTRFS array is backed up regulary like personal files and such.
+
+I have a good back up method for it all, so I am not too worried about loosing data.
 
 Here is a nice little graph.
 
