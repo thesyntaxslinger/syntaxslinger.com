@@ -22,7 +22,7 @@ The worst thing that could happen is that a Debian update breaks from an unatten
 
 Here is my simple config that is applied to all machines when I bootstrap them:
 
-```bash
+```conf
 Unattended-Upgrade::Origins-Pattern {
         "origin=Debian,codename=${distro_codename},label=Debian-Security";
         "origin=Debian,codename=${distro_codename}-security,label=Debian-Security";

@@ -54,7 +54,7 @@ Simply hit apply and save the configuration, and that is now it!
 
 You should now be able to ping your NAT64 prefix on your client devices with IPv6 and it should work.
 
-```bash
+```shell
 pc@ss ~ ping -c 3 -6 64:ff9b::9.9.9.9
 PING 64:ff9b::9.9.9.9(64:ff9b::909:909) 56 data bytes
 64 bytes from 64:ff9b::909:909: icmp_seq=1 ttl=53 time=29.0 ms

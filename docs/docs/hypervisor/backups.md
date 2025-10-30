@@ -72,7 +72,7 @@ I actually run 3 seperate instances of Proxmox Backup Server in my environment:
 
 Here is the latest compose file I am using for this:
 
-``` { .yaml .copy }
+```yaml
 services:
   pbs:
     image: ayufan/proxmox-backup-server
