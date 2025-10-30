@@ -86,3 +86,13 @@ nav:
   - 'Software':
     - software/index.md
     - 'Authelia': software/authelia.md
+    - 'Caddy': software/caddy.md
+    - 'Gitea': software/gitea.md
+    - 'Miniflux': software/miniflux.md
+    - 'Nextcloud': software/nextcloud.md
+    - 'ntfy': software/ntfy.md
+    - 'OwnTracks': software/owntracks.md
+    - 'Paperless-ngx': software/paperless-ngx.md
+    - 'PostgreSQL': software/postgresql.md
+    - 'Radicale': software/radicale.md
+
