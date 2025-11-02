@@ -355,4 +355,4 @@ apt install redis -y
 systemctl enable --now redis
 ```
 
-You can use either a linux sock or tcp.
+You can use either a linux socket or tcp.
