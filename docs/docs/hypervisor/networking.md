@@ -1,6 +1,6 @@
 # Networking
 
-I go over this in more detail in the [networking](/homelab/networking/overview/) section.
+I go over this in more detail in the [networking](/docs/networking/overview/) section.
 
 But I virtualise my router in Proxmox with OPNsense.
 

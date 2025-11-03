@@ -9,7 +9,7 @@ My LAN is tightly locked down. I only expose the services I actually want access
 ### Proxmox
 
 * Default policy: Deny all incoming traffic, allow all outgoing.
-* SSH (Port 22): Allowed for remote management, with additional hardening handled by the [bootstrapping script](/homelab/administration/bootstrapping/).
+* SSH (Port 22): Allowed for remote management, with additional hardening handled by the [bootstrapping script](/docs/administration/bootstrapping/).
 * ICMP/ICMPv6: Permitted for network diagnostics (ping checks).
 * Internal service access: Restricted by default. For example, only specific containers are allowed to communicate with PostgreSQL on port 5432—everything else is blocked unless explicitly allowed.
 

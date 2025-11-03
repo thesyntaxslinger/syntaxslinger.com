@@ -25,7 +25,7 @@ unzip latest.zip
 rm -r latest.zip
 ```
 
-Next we need to set up NGINX so that our server is available. We aren't going to use TLS for this setup since we will be using [Caddy](/homelab/software/caddy) to reverse proxy it later.
+Next we need to set up NGINX so that our server is available. We aren't going to use TLS for this setup since we will be using [Caddy](/docs/software/caddy) to reverse proxy it later.
 
 You can find more documentation on NGINX at the [Nextcloud docs](https://docs.nextcloud.com/server/stable/admin_manual/installation/nginx.html).
 
@@ -234,7 +234,7 @@ server {
 }
 ```
 
-We are using the `http2 on;` as we are going to be using h2c with [Caddy](/homelab/software/caddy) for the reverse proxy.
+We are using the `http2 on;` as we are going to be using h2c with [Caddy](/docs/software/caddy) for the reverse proxy.
 
 
 ## Configuration

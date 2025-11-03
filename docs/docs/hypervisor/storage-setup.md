@@ -1,6 +1,6 @@
 # Storage Setup
 
-For my storage setup, I have a pretty cursed setup. If you read the [introduction](/homelab/) you know that my first "homelab" was actually just a repurposed desktop running Debian 11.
+For my storage setup, I have a pretty cursed setup. If you read the [introduction](/docs/) you know that my first "homelab" was actually just a repurposed desktop running Debian 11.
 
 Since I migrated this same machine later into node for my Proxmox cluster, I kept the same type of file system since I didn't have a spare 22TB hard drive just lying around that I can use for the migration.
 
