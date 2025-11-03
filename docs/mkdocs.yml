@@ -94,5 +94,3 @@ nav:
     - 'OwnTracks': software/owntracks.md
     - 'Paperless-ngx': software/paperless-ngx.md
     - 'PostgreSQL': software/postgresql.md
-    - 'Radicale': software/radicale.md
-
