@@ -1,4 +1,4 @@
-# Gitea - The self-hosted GitHub
+# Gitea - The Self-Hosted GitHub
 
 I use Gitea for all my code repositories. I love it because I can have personal repos that aren't hosted on someone else's computer.
 
