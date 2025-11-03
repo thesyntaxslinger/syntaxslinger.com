@@ -1,8 +1,8 @@
 # Gitea - The self-hosted GitHub
 
-I use Gitea for all my code repositories. I love it because I can have personal repos that aren't hosted on someone elses computer.
+I use Gitea for all my code repositories. I love it because I can have personal repos that aren't hosted on someone else's computer.
 
-I also mirror some of my repositories to GitHub for public viewing as well.
+Furthermore, I also mirror some of my repositories to GitHub for public viewing as well.
 
 ## Installation
 
@@ -18,7 +18,7 @@ mv gitea-* gitea
 chmod +x /opt/gitea/gitea
 ```
 
-We should make a gitea user as well so that we can use SSH for repos later.
+We should make a Gitea user as well so that we can use SSH for repos later.
 
 ```shell
 sudo adduser --system --home /etc/gitea --shell /usr/bin/bash gitea
@@ -144,9 +144,9 @@ LOGIN_REMEMBER_DAYS = 30
 JWT_SECRET = secret
 ```
 
-You will need a postgres database for this setup, or you can use `sqlite3`.
+You will need a Postgres database for this setup, or you can use `sqlite3`.
 
-Now we can start gitea!
+Now we can start Gitea!
 
 ```shell
 systemctl enable --now gitea

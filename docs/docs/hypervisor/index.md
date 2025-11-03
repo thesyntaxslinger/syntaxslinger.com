@@ -8,7 +8,7 @@ You can install Proxmox Virtual Environment by obtaining a copy of their ISO ins
 
 You can also install it straight on top of a Debian 13 installation due to Proxmox being designed on top of Debian already (this is mostly for storage setups that the default installer cannot do).
 
-You can find the ISO file from the offical Proxmox website [here](https://www.proxmox.com/en/downloads).
+Furthermore, you can find the ISO file from the official Proxmox website [here](https://www.proxmox.com/en/downloads).
 
 ![Proxmox Logo](/assets/img/proxmox.webp#only-light)
 ![Proxmox Logo](/assets/img/proxmox-light.webp#only-dark)

@@ -7,7 +7,7 @@ Virtual Private Networks (VPNs) allow devices to communicate securely over untru
 
 In most home networks, devices are hidden behind Network Address Translation (NAT), meaning they cannot be reached directly from the internet. This becomes a problem when you want to remotely access your internal services, connect to your homelab, or establish peer-to-peer (P2P) links.
 
-Also, exposing a VPN endpoint is infinitely better than exposing a webserver with it's application behind it.
+Also, exposing a VPN endpoint is infinitely better than exposing a web server with its application behind it.
 
 A VPN solves this by:
 
@@ -39,11 +39,11 @@ That's it! Yeah Tailscale is actually super simple, the software handles everyth
 
 These don't go to well for a few reasons.
 
-In these openBSD OS's, they like to make it so outbound UDP connections through a NAT don't have a static port.
+In these OpenBSD OS's, they like to make it so outbound UDP connections through a NAT don't have a static port.
 
-This adds a little bit of obsecurity to outbound requests for your average users, but for us, it is breaking UDP hole punching - so we need to turn it off.
+This adds a little bit of obscurity to outbound requests for your average users, but for us, it is breaking UDP hole punching - so we need to turn it off.
 
-> Taken from the offical Tailscale documentation on BSD routers [here](https://tailscale.com/kb/1097/install-opnsense)
+> Taken from the official Tailscale documentation on BSD routers [here](https://tailscale.com/kb/1097/install-opnsense)
 
 ##### Direct Connections for LAN Clients
 
@@ -79,7 +79,7 @@ From the command line, use `tailscale ping` node to verify the connection path b
 
 ### WireGuard
 
-I like to use WireGuard on mobile since it is a bit lighter than tailscale due to the aggressive keepalives needed to sustain a UDP hole punch session.
+I like to use WireGuard on mobile since it is a bit lighter than Tailscale due to the aggressive keep-alives needed to sustain a UDP hole punch session.
 
 In my environment, I use WireGuard primarily over IPv6, allowing direct connectivity between systems without NAT traversal issues. The simplicity of its configuration just public/private key pairs and interface definitions makes it ideal for site-to-site tunnels or linking isolated environments.
 

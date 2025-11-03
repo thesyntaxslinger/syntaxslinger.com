@@ -1,7 +1,3 @@
----
-title: DNS
----
-
 # DNS
 
 This page describes my homelab DNS setup, which is designed for speed, privacy, and internal resolution.
@@ -12,7 +8,7 @@ I use AdGuard Home as my primary DNS server for the network. AdGuard Home handle
 
 This setup allows:
 
-- Centralized DNS filtering and logging via AdGuard Home
+- Centralised DNS filtering and logging via AdGuard Home
 - Secure, encrypted DNS queries to external resolvers
 - Redundant and distributed DNS across multiple nodes
 
@@ -31,7 +27,7 @@ DNS64 is turned off for Unbound 4 for split-tunnel VPN clients
 
 ### Why Unbound?
 
-AdGuard Home can do DNS64 on it's own, but there is actually a CNAME resolution bug where it will not follow a CNAME record properly and synthesise it to a NAT64 address. 
+AdGuard Home can do DNS64 on its own, but there is actually a CNAME resolution bug where it will not follow a CNAME record properly and synthesise it to a NAT64 address. 
 
 See [this issue](https://github.com/AdguardTeam/AdGuardHome/issues/6932) on GitHub.
 
@@ -39,7 +35,7 @@ To fix this, I put Unbound behind AdGuard Home and then configured Unbound to sy
 
 ### Syncing AdGuard Instances
 
-Node 1 contains the master/primary AdGuard Home instance which then has it's config taken and synced to the other 3.
+Node 1 contains the master/primary AdGuard Home instance which then has its config taken and synced to the other 3.
 
 There is no configuration needed for the DNS64 turned off node, since it is Unbound that handles that.
 
@@ -99,4 +95,4 @@ features:
 
 I mainly have 2 domains for DNS. One is my bought domain from a domain registrar, and the other is for local DNS within the homelab.
 
-I have 2 configured so that internally, services can communitcate with their `localdomain` addresses and end users can communicate with the front-facing Let's Encrypt domain that points to my [Caddy](https://github.com/caddyserver/caddy) LXC container. 
+I have 2 configured so that internally, services can communicate with their `localdomain` addresses and end users can communicate with the front-facing Let's Encrypt domain that points to my [Caddy](https://github.com/caddyserver/caddy) LXC container. 

@@ -1,7 +1,3 @@
----
-title: Introduction
----
-
 # Introduction
 
 Welcome to my homelab documentation!  
@@ -10,7 +6,7 @@ Here, I share the journey of how I built, broke, and rebuilt the projects that n
 
 ## How did we get here?
 
-What started as a small experiment with a repurposed desktop running Debian 11 has gradually evolved into a fully-fledged homelab environment. Over time, I’ve explored everything from self-hosted services and automation to networking experiments and data backups, all fueled by curiosity and a desire to understand how things really work behind the scenes.
+What started as a small experiment with a repurposed desktop running Debian 11 has gradually evolved into a fully-fledged homelab environment. Over time, I’ve explored everything from self-hosted services and automation to networking experiments and data backups, all fuelled by curiosity and a desire to understand how things really work behind the scenes.
 
 ## Why Homelab?
 

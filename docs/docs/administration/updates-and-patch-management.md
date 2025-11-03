@@ -1,7 +1,3 @@
----
-title: Updates & Patch Management
----
-
 # Updates and Patch Management
 
 This is the most tedious part of any homelab. Some people choose to be lazy and install some kind of service like [watchtower](https://github.com/containrrr/watchtower), or just flat out don't patch anything at all.
@@ -33,7 +29,7 @@ Obviously this kind of automatic updating is lazy and shouldn't be encouraged. I
 
 ### Ansible
 
-For automatic patching for non security updates, I like to use ansible. It completely automates the way I patch my machines, and will alert me of failures along the way.
+For automatic patching for non security updates, I like to use Ansible. It completely automates the way I patch my machines, and will alert me of failures along the way.
 
 I have 2 pretty simple Ansible playbooks that cover this. `apt-check.yaml` and `apt-upgrade.yaml`.
 
@@ -139,7 +135,7 @@ Some software isn't in Debian repositories and needs to be updated manually whet
 
 RSS or real-simple-syndication feeds are a great way to get the latest updates/notifications for new software updates.
 
-It is as simple as getting the GitHub releases page for the software you are using, then adding `.atom` onto the end of the url.
+It is as simple as getting the GitHub releases page for the software you are using, then adding `.atom` onto the end of the URL.
 
 This will create an RSS feed for that software which will show up in your RSS reader. 
 
@@ -153,7 +149,7 @@ This helps when patching, since you know what to expect and can become a better 
 
 ### Updating ZSH Globally With Ansible
 
-I love ZSH. So here is how I update all my VM's, LXC containers and VPS's with ansible:
+I love ZSH. So here is how I update all my VM's, LXC containers and VPS's with Ansible:
 
 ```yaml
 ---

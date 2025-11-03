@@ -1,7 +1,3 @@
----
-title: VLANs
----
-
 # VLANs and Network Segmentation
 
 ## What are VLANs?
@@ -11,10 +7,10 @@ A VLAN, or Virtual Local Area Network, is a way to segment a physical network in
 The main benefits of VLANs are:
 
 - Isolation: Devices in one VLAN cannot directly communicate with devices in another VLAN unless explicitly allowed through routing or firewall rules. This improves security and limits broadcast traffic.
-- Organization: You can separate different types of devices — for example, servers, workstations, IoT devices, and guest networks — into different VLANs.
+- Organisation: You can separate different types of devices — for example, servers, workstations, IoT devices, and guest networks into different VLANs.
 - Scalability: VLANs make it easier to manage large networks by grouping devices logically rather than physically.
 
-VLANs are defined by a VLAN ID (a number between 1–4094) and are implemented through a process called tagging. VLAN tags are added to network frames so that switches know which VLAN each frame belongs to.
+VLANs are defined by a VLAN ID (a number between 1-4094) and are implemented through a process called tagging. VLAN tags are added to network frames so that switches know which VLAN each frame belongs to.
 
 In a homelab, VLANs are often used to:
 
@@ -22,12 +18,12 @@ In a homelab, VLANs are often used to:
 - Separate IoT or guest devices from your main network
 - Create test environments without additional physical hardware
 
-Understanding VLANs is essential before moving into more advanced topics like IPv6 subnetting and routing between different network segments.
+Understanding VLANs is essential before moving into more advanced topics like IPv6 sub-netting and routing between different network segments.
 
 
 ## How I Implement VLANs In My Own Homelab
 
-I implement VLANs using a managed switch, which allows me to separate network traffic logically while still using the same physical infrastructure. This setup helps improve security, organize my devices, and isolate sensitive systems from untrusted devices.
+I implement VLANs using a managed switch, which allows me to separate network traffic logically while still using the same physical infrastructure. This setup helps improve security, oorganisemy devices, and isolate sensitive systems from untrusted devices.
 
 ### My VLANs
 

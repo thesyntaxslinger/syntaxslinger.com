@@ -1,7 +1,3 @@
----
-title: Networking
----
-
 # Networking
 
 I go over this in more detail in the [networking](/homelab/networking/overview/) section.

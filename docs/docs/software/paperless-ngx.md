@@ -174,10 +174,10 @@ PAPERLESS_SECRET_KEY=secret
 PAPERLESS_URL=https://paperless.mydomain.com
 ```
 
-Then just make sure your postgresql database is setup and ready to accept connections from paperless, then we can start all the services.
+Then just make sure your PostgreSQL database is set up and ready to accept connections from paperless, then we can start all the services.
 
 ```shell
 systemctl enable --now paperless-webserver paperless-scheduler paperless-task-queue paperless-consumer
 ```
 
-You might need to follow some extra documentation to setup an admin user from the CLI.
+You might need to follow some extra documentation to set up an admin user from the CLI.

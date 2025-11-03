@@ -26,7 +26,7 @@ The configuration is super easy. Since I am in a homelab environment, there are 
 - Let's Encrypt certificates do not work unless you use some sort of DNS challenge
 - Caddy has a sort of bad implementation of DNS challenges depending on your provider.
 
-I am going to get around this by using `certbot` as I find it super simple to setup TLS certificates and have them auto update and not have to rely on Caddy being funky.
+I am going to get around this by using `certbot` as I find it super simple to set up TLS certificates and have them auto update and not have to rely on Caddy being funky.
 
 ### Certbot
 
@@ -38,7 +38,7 @@ apt install certbot python3-certbot-dns-cloudflare
 
 We can then make a file in /etc/letsencrypt/cloudflare.ini which will contain our Cloudflare API token.
 
-> You can use an email and global api key, but that is a lot more permissive than a DNS only api token.
+> You can use an email and global API key, but that is a lot more permissive than a DNS only API token.
 
 ```shell
 touch /etc/letsencrypt/cloudflare.ini
@@ -46,7 +46,7 @@ chmod 600 /etc/letsencrypt/cloudflare.ini
 echo "dns_cloudflare_api_token = TOKEN" >> /etc/letsencrypt/cloudflare.ini
 ```
 
-Make sure to replace the TOKEN with your actual api token.
+Make sure to replace the TOKEN with your actual API token.
 
 Now we can grab the cert.
 
@@ -58,11 +58,11 @@ certbot certonly --dns-cloudflare \
 
 #### Linking Certbot to Caddy
 
-Caddy can't actually use certbot certificates yet as the private key will not be owned by the caddy user.
+Caddy can't actually use Certbot certificates yet as the private key will not be owned by the caddy user.
 
-We can fix this with a simple hook in certbot to automatically deploy new certificates once they come down.
+We can fix this with a simple hook in Certbot to automatically deploy new certificates once they come down.
 
-First we need to setup the certs folder.
+First we need to set up the certs folder.
 
 ```shell
 mkdir /etc/caddy/certs

@@ -1,12 +1,8 @@
----
-title: Bootstrapping
----
-
 # Bootstrapping
 
 I hate doing repetitive tasks over and over. Especially when I need to create a new container for something.
 
-To fix this issue and succumb to my laziness. I wrote a nice little bootstrap script to auto setup a new VM or LXC container.
+To fix this issue and succumb to my laziness. I wrote a nice little bootstrap script to auto set up a new VM or LXC container.
 
 ```bash
 # bootstrap.sh

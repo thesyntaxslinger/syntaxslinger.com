@@ -20,7 +20,7 @@ apt install ntfy
 
 ## Configuration
 
-Ntfy uses a pretty simple authentication file being `yaml` that we can populate at `/etc/ntfy/server.yml`:
+ntfy uses a pretty simple authentication file being `yaml` that we can populate at `/etc/ntfy/server.yml`:
 
 > This configuration uses `enable-signup: false` so you will not be able to make a user unless you change this to `true`. You can change it back later to `false` if you want to disable signup (probably better for a private instance).
 
@@ -60,7 +60,7 @@ ntfy access '*' 'up*' write-only
 
 ## Extra
 
-I like to start tasks and then get notified later from them when doing sys-admin work. I wrote a nice little bash script that I just `curl | bash` for when I want to do this.
+I like to start tasks and then get notified later from them when doing sysadmin work. I wrote a nice little bash script that I just `curl | bash` for when I want to do this.
 
 Here is the script:
 
@@ -97,4 +97,4 @@ I then just can do a task like this:
 ls -alh | bash -c "$(curl -fsSL https://scripts.mydomain.com/ntfysend.sh)"  
 ```
 
-Which gets send straight to my ntfy instance.
+Which gets sent straight to my ntfy instance.

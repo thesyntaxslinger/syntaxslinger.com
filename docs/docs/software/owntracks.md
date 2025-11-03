@@ -4,7 +4,7 @@ This app is a lifesaver for me since friends and family want me to share my loca
 
 ## Installation and Configuration
 
-We will be using a Debian 13 LXC container for this and the [OwnTracks Quicksetup Booklet](https://owntracks.org/booklet/guide/quicksetup/) since the awesome devs behind OwnTracks have made the setup so simple you don't even have to do much setup.
+We will be using a Debian 13 LXC container for this and the [OwnTracks Quicksetup Booklet](https://owntracks.org/booklet/guide/quicksetup/) since the awesome devs behind OwnTracks have made the setup so simple you don't even have to do much set up.
 
 First we will clone the repo:
 

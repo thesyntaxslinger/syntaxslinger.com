@@ -62,7 +62,7 @@ The config for Authelia will depend on your setup. You can get really technical 
 
 I run my Authelia with a Postgres Database, Redis, YAML users database.
 
-I could probably upgrade the users database to something else, but it's just me! If I was in a more enterprise environment, this would 100% be LDAP.
+I could probably upgrade the user's database to something else, but it's just me! If I was in a more enterprise environment, this would 100% be LDAP.
 
 ```yaml
 ---
@@ -269,7 +269,7 @@ identity_providers:
         token_endpoint_auth_method: 'client_secret_basic'
 ```
 
-### Users Database
+### User's Database
 
 ```yaml
 ---
@@ -336,7 +336,7 @@ systemctl enable --now authelia
 
 ### Redis
 
-Redis is super simple to setup and we can just use the defaults here.
+Redis is super simple to setup, and we can just use the defaults here.
 
 ```shell
 apt update
@@ -346,7 +346,7 @@ systemctl enable --now redis
 
 ## Caddy Integration
 
-I use Caddy to integrate Authleia to all my services.
+I use Caddy to integrate Authelia to all my services.
 
 You can that up pretty easily.
 

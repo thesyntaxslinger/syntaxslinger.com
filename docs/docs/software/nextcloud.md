@@ -10,8 +10,10 @@ We need a lot of dependencies for Nextcloud. We are also going to be using NGINX
 
 ```shell
 apt update
-apt install $PHP_DEPS nginx php-fpm
+apt install php nginx php-fpm
 ```
+
+You will also have to install a bunch of other `php-*` packages that are different for every setup.
 
 Next grab the latest Nextcloud release and put it into `/var/www/nextcloud` as this will be our home directory.
 
@@ -23,7 +25,7 @@ unzip latest.zip
 rm -r latest.zip
 ```
 
-Next we need to setup NGINX so that our server is available. We aren't going to use TLS for this setup since we will be using [Caddy](/homelab/software/caddy) to reverse proxy it later.
+Next we need to set up NGINX so that our server is available. We aren't going to use TLS for this setup since we will be using [Caddy](/homelab/software/caddy) to reverse proxy it later.
 
 You can find more documentation on NGINX at the [Nextcloud docs](https://docs.nextcloud.com/server/stable/admin_manual/installation/nginx.html).
 
@@ -355,4 +357,4 @@ apt install redis -y
 systemctl enable --now redis
 ```
 
-You can use either a linux socket or tcp.
+You can use either a Linux socket or TCP.

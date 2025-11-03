@@ -1,7 +1,3 @@
----
-title: Backups
----
-
 # Backups
 
 Backups are probably the most important thing you need to do when running any kind of homelab.
@@ -40,7 +36,7 @@ I would love to try out immutable backups as well, but for my current setup at h
 
 I use Borg mainly for my files that aren't in VM's or LXC containers. For example - for my NAS LXC container where I have NFS and SMB setup, this uses my BTRFS storage as the backend storage provider, and because of the size of this - it doesn't get backed up at all.
 
-This is where Borg comes in - I select the files I want manually to backup via a `bash` script, which will then backup to the same places my PBS instances go too:
+This is where Borg comes in - I select the files I want manually to back up via a `bash` script, which will then back up to the same places my PBS instances go too:
 
 1. My desktop PC for both the HDD and SSD
 2. My VPS
@@ -55,7 +51,7 @@ PBS is a great system for backing up VMs and LXC containers since it only backs 
 
 In my setup:
 
-- Each PVE node is configured to back up to a centralized PBS instance.
+- Each PVE node is configured to back up to a centralised PBS instance.
 - Daily incremental backups run automatically.
 - I keep **7 daily**, **4 weekly**, and **3 monthly** restore points.
 - Backups are verified weekly to ensure integrity.
@@ -65,7 +61,7 @@ This is installed inside Proxmox LXC container with a simple LXC mount that poin
 
 ### Docker
 
-I actually run 3 seperate instances of Proxmox Backup Server in my environment:
+I actually run 3 separate instances of Proxmox Backup Server in my environment:
 
 1. My desktop PC for both the HDD and SSD via Docker
 2. My VPS via Docker
@@ -92,7 +88,7 @@ services:
     stop_signal: SIGHUP
 ```
 
-As you can see from the yaml, the SSD and HDD are both mounted and have seperate datastores inside of them.
+As you can see from the YAML, the SSD and HDD are both mounted and have separate datastores inside of them.
 
 Although this isn't recommended, the PBS software is actually just a .deb file that uses a few dependencies, so you can even install it bare metal if you want to. Of course you will miss out on the fancy features of PBS like the tape backups and smart monitoring, but this works super well for my setup.
 
@@ -104,7 +100,7 @@ I script both of these backups periodically with cron and systemd respectively. 
 
 #### Borg Backup
 
-I will start with the simplest backup that occurs - which is Borg too the VPS. This is just a simple script that runs every night with a crontab entry:
+I will start with the simplest backup that occurs - which is Borg to the VPS. This is just a simple script that runs every night with a crontab entry:
 
 ```bash
 #!/bin/bash
@@ -117,7 +113,7 @@ borg prune --keep-daily 7 --keep-weekly 4 --keep-monthly 3 ssh://ssh_host/root/b
 borg compact ssh://ssh_host/root/backups/server
 ```
 
-This will handle all the files in my NAS LXC that I use for filesystem type operations.
+This will handle all the files in my NAS LXC that I use for file system type operations.
 
 #### Proxmox Backup Server
 
@@ -131,13 +127,13 @@ This will run every night and make sure all the containers are synced up, as wel
 
 ### Desktop PC
 
-This is a bit of a tricky one. My desktop PC is Linux will full disk encryption. There isn't a way that allows me to unlock my PC without storing my master encryption password somewhere on another system in cleartext. I have opted for the more sane approach.
+This is a bit of a tricky one. My desktop PC is Linux will full disk encryption. There isn't a way that allows me to unlock my PC without storing my master encryption password somewhere on another system in clear text. I have opted for the more sane approach.
 
 ***A bash script that runs on startup***
 
 But this can't just run every time my computer boots up - as my backups are only done nightly.
 
-This script needs to handle both of the Borg side, as well as the PBS side.
+This script needs to handle both of the Borg side, and the PBS side.
 
 And we also need to start it with systemd so we can make sure the network is online + also make it non-blocking so I can still use my desktop environment.
 
@@ -276,17 +272,17 @@ Looks pretty bad I know. But it serves it purpose with the following features:
 - Only runs once a day, if interrupted it will try again on next reboot.
 - Handles both Borg and PBS.
 - Uses inodes due to starting Borg remotely for a "push" rather than "pull" (faster).
-- Supports shutdown if I want to leave for the day but I need the PC to say on for more backups.
+- Supports shutdown if I want to leave for the day, but I need the PC to say on for more backups.
 
 ## Restore Testing
 
-Backups are literally pointless if you don't test them regularly. That is why I regularly once a month test to make sure that my VM's and LXC containers are restoreable, and my Borg repo offsite and on my desktop is able to be mounted (via python-pyfuse3) and restored from. 
+Backups are literally pointless if you don't test them regularly. That is why I regularly once a month test to make sure that my VM's and LXC containers are restorable, and my Borg repo offsite and on my desktop is able to be mounted (via python-pyfuse3) and restored from. 
 
 ## Other Backups
 
 I mentioned encryption for all of this. So what happens if a fire hits my home and I lose everything and only have my offsite backup?
 
-That is why I have a portable usb key that contains all my encryption keys protected with full disk encryption if I need to access this.
+That is why I have a portable USB key that contains all my encryption keys protected with full disk encryption if I need to access this.
 
 Since these keys don't get updated very often. It's just a matter of updating them when you make changes to your encryption.
 

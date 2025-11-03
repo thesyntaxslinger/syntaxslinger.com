@@ -1,8 +1,4 @@
----
-title: IPv6
----
-
-# IPv6 - The Better Protocol
+# IPv6 - The Modern Protocol
 
 ## Overview
 
