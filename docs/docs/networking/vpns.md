@@ -95,7 +95,7 @@ SERVER_PRIV=$(wg genkey)
 SERVER_PUB=$(echo $SERVER_PRIV | wg pubkey)
 
 CLIENT_PRIV=$(wg genkey)
-CLIENT_PUB=$(echo $SERVER_PRIV | wg pubkey)
+CLIENT_PUB=$(echo $CLIENT_PRIV | wg pubkey)
 
 DEFAULT_ROUTE=$(ip route | awk '/default/ {print $5}')
 
