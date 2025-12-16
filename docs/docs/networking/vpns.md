@@ -99,37 +99,39 @@ CLIENT_PUB=$(echo $CLIENT_PRIV | wg pubkey)
 
 DEFAULT_ROUTE=$(ip route | awk '/default/ {print $5}')
 
+random_hex=$(openssl rand -hex 7) 
+IPV6_PREFIX="fd${random_hex:0:2}:${random_hex:2:4}:${random_hex:6:4}:${random_hex:10:4}::"
 
 # make configs
 mkdir -p configs
 
 cat <<EOF > configs/server.conf
 [Interface]
-Address = fd0a:2ef6:e8cf:f250::1/64
+Address = ${IPV6_PREFIX}1/64
 ListenPort = 51820
 PrivateKey = $SERVER_PRIV
 
 PostUp = ip6tables -A FORWARD -i wg0 -j ACCEPT
 PostUp = ip6tables -t nat -A POSTROUTING -o $DEFAULT_ROUTE -j MASQUERADE
-PostUp = ip6tables -t nat -A POSTROUTING -s fd0a:2ef6:e8cf:f250::/64 -o $DEFAULT_ROUTE -j MASQUERADE
+PostUp = ip6tables -t nat -A POSTROUTING -s ${IPV6_PREFIX}/64 -o $DEFAULT_ROUTE -j MASQUERADE
 
 
 PostDown = ip6tables -D FORWARD -i wg0 -j ACCEPT
 PostDown = ip6tables -t nat -D POSTROUTING -o $DEFAULT_ROUTE -j MASQUERADE
-PostDown = ip6tables -t nat -D POSTROUTING -s fd0a:2ef6:e8cf:f250::/64 -o $DEFAULT_ROUTE -j MASQUERADE
+PostDown = ip6tables -t nat -D POSTROUTING -s ${IPV6_PREFIX}/64 -o $DEFAULT_ROUTE -j MASQUERADE
 
 
 [Peer]
 # Client 1
 PublicKey = $CLIENT_PUB
-AllowedIPs = fd0a:2ef6:e8cf:f250::2/128
+AllowedIPs = ${IPV6_PREFIX}2/128
 EOF
 
 cat <<EOF > configs/client.conf
 [Interface]
-Address = fd0a:2ef6:e8cf:f250::2/64
+Address = ${IPV6_PREFIX}2/64
 PrivateKey = $CLIENT_PRIV
-DNS = fd0a:2ef6:e8cf:f250::1
+DNS = ${IPV6_PREFIX}1
 
 [Peer]
 PublicKey = $SERVER_PUB
